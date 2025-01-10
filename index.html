@@ -7,11 +7,41 @@
     <title>HTML Academy: Седона</title>
     <meta name="description" content="Добро пожаловать в Седону">
     <meta name="keywords" content="Седона">
+    <link rel="stylesheet" href="styles/main.css">
   </head>
 
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+    <header class="header">
+      <a class="header__logo-link" href="#" aria-label="Главная страница" title="Главная страница">
+        <img class="header__logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
+      </a>
+      <nav class="header__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--current" href="#" aria-current="page">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="about.html">О городе</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+        <ul class="navigation__list navigation__list--right">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--search" href="#" title="Поиск">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--favorite" href="#" title="Избранное">
+              <span class="visually-hidden">В избранное добавлено</span>
+              <output class="navigation__favorite-count">12</output>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
   </body>
 
