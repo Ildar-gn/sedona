@@ -73,3 +73,14 @@ body {
   color: var(--color-dark-secondary);
   background-color: var(--color-gray-light);
 }
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
+}
+
+.main {
+  flex-grow: 1;
+}
