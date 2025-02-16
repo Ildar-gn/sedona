@@ -17,7 +17,7 @@
       <!-- header -->
       <header class="header">
         <a class="header__logo-link" href="index.html" title="Перейти на главную страницу">
-          <img class="header__logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
+          <img src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
         </a>
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
@@ -43,8 +43,8 @@
                 <output class="navigation__favorite-count is--active">12</output>
               </a>
             </li>
-            <li class="navigation__item navigation__item--button">
-              <a class="button button--primary button--small" href="#">Хочу сюда!</a>
+            <li class="navigation__item">
+              <a class="header__button button button--primary button--small" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -55,8 +55,8 @@
 
         <!-- inner hero -->
         <div class="inner-hero">
-          <header class="inner-hero__header" aria-labelledby="inner-hero-title">
-            <h1 class="inner-hero__title h1" id="inner-hero-title">Гостиницы Седоны</h1>
+          <header class="inner-hero__header" aria-labelledby="inner-hero">
+            <h1 class="inner-hero__title h1" id="inner-hero">Гостиницы Седоны</h1>
             <!-- breadcrumbs -->
             <nav class="breadcrumbs" aria-label="Навигация по странице">
               <ol class="breadcrumbs__list">
@@ -66,15 +66,15 @@
                   </a>
                 </li>
                 <li class="breadcrumbs__item">
-                  <a class="breadcrumbs__link" aria-current="page">Гостиницы</a>
+                  <a class="breadcrumbs__link is--current" aria-current="page" href="#">Гостиницы</a>
                 </li>
               </ol>
             </nav>
           </header>
 
           <!-- filter -->
-          <section class="filter" aria-labelledby="filter-title">
-            <h2 class="visually-hidden" id="filter-title">Фильтр выбора жилья в Седоне</h2>
+          <section class="filter" aria-labelledby="filter">
+            <h2 class="visually-hidden" id="filter">Фильтр выбора жилья в Седоне</h2>
             <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Инфраструктура:</legend>
@@ -146,24 +146,26 @@
                 </div>
               </fieldset>
               <div class="filter__buttons">
-                <button class="filter__button button button--primary" type="submit">Применить</button>
-                <button class="filter__button button button--secondary" type="reset">Сбросить</button>
+                <button class="filter__button button button--small button--secondary" type="submit">Применить</button>
+                <button class="filter__button button button--small button--secondary" type="reset">Сбросить</button>
               </div>
             </form>
           </section>
         </div>
 
         <!-- catatog -->
-        <section class="catalog" aria-labelledby="catalog-title">
+        <section class="catalog" aria-labelledby="catalog">
           <div class="catalog__header">
-            <h2 class="catalog__title h2" id="catalog-title">Найдено гостиниц: <output id="hotel-count">38</output></h2>
+            <h2 class="h2" id="catalog">Найдено гостиниц: <output id="hotel-count">38</output></h2>
 
             <!-- sort -->
-            <select class="sort__select" name="sort" aria-label="Выпадающий список сортировки">
-              <option value="popular">Сначала популярные</option>
-              <option value="cheap" selected>Сначала дешёвые</option>
-              <option value="expensive">Сначала дорогие</option>
-            </select>
+            <div class="select-wrapper">
+              <select class="select__sort-list" name="sort" aria-label="Выпадающий список сортировки">
+                <option value="popular">Сначала популярные</option>
+                <option value="cheap" selected>Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
+              </select>
+            </div>
 
             <!-- view -->
             <ul class="view__list">
@@ -185,52 +187,94 @@
             </ul>
           </div>
 
-          <!-- catalog -->
+          <!-- catalog list -->
           <ul class="catalog__list">
             <li class="catalog__item">
-              <article class="catalog__article">
-                <h3 class="catalog__title h3">
-                  <a href="#" tabindex="-1">Amara Resort & Spa</a>
-                </h3>
-                <a class="catalog__image-wrapper" href="#" tabindex="-1" aria-hidden="true" aria-label="Открыть карточку гостиницы">
-                  <img class="catalog__image" src="images/catalog/hotel-1.jpeg" width="300" height="212" alt="Гостиница Amara Resort & Spa Ночное небо, усыпанное звездами, видно сквозь естественный каменный арку в каньоне Седона.">
-                </a>
+              <article>
+                <h3 class="catalog__h3 h3">Amara Resort & Spa</h3>
+                <img class="catalog__image" src="images/catalog/hotel-1.jpeg" width="300" height="212" alt="Гостиница Amara Resort & Spa Ночное небо, усыпанное звездами, видно сквозь естественный каменный арку в каньоне Седона.">
                 <p class="catalog__type">Гостиница</p>
                 <p class="catalog__price">От <span>4000</span> ₽</p>
-                <a class="catalog__button button button--small button--primary" href="#">Подробнее</a>
-                <a class="catalog__button button button--small button--secondary" href="#" role="button">В избранное</a>
-                <p class="catalog__stars catalog__stars--4"><span class="visually-hidden">4 звезды</span></p>
-                <p class="catalog__rating">Рейтинг: <span>8,5</span></p>
+                <a class="catalog__button button button--small button--primary" href="#" title="Ознакомиться подробнее">Подробнее</a>
+                <button class="catalog__button button button--small button--secondary" type="button" title="Добавить в избранное" aria-pressed="false">В избранное</button>
+                <div class="catalog__stars catalog__stars--4" role="img">
+                  <span class="visually-hidden">4 звезды</span>
+                </div>
+                <p class="catalog__rating button button--small">Рейтинг: <span>8,5</span></p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article>
+                <h3 class="catalog__h3 h3">Villas at Poco Diablo</h3>
+                <img class="catalog__image" src="images/catalog/hotel-2.jpeg" width="300" height="212" alt="Закат над красочными скалами Седоны с радугой, выходящей из темных облаков. Скалы освещены солнцем, подчеркивая их богатые, теплые оттенки.">
+                <p class="catalog__type">Гостиница</p>
+                <p class="catalog__price">От <span>5000</span> ₽</p>
+                <a class="catalog__button button button--small button--primary" href="#" title="Ознакомиться подробнее">Подробнее</a>
+                <button class="catalog__button button button--small button--secondary is--active" type="button" title="Удалить из избранного" aria-pressed="true">В избранном</button>
+                <div class="catalog__stars catalog__stars--4" role="img">
+                  <span class="visually-hidden">4 звезды</span>
+                </div>
+                <p class="catalog__rating button button--small">Рейтинг: <span>9,2</span></p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article>
+                <h3 class="catalog__h3 h3">Desert Quail Inn</h3>
+                <img class="catalog__image" src="images/catalog/hotel-3.jpeg" width="300" height="212" alt="Закат над красными скалами Седоны, обрамленный зелеными деревьями и ярким голубым небом с облаками. Скалы освещены золотистым светом заходящего солнца, подчеркивая их сложные слои и текстуры.">
+                <p class="catalog__type">Гостиница</p>
+                <p class="catalog__price">От <span>2500</span> ₽</p>
+                <a class="catalog__button button button--small button--primary" href="#" title="Ознакомиться подробнее">Подробнее</a>
+                <button class="catalog__button button button--small button--secondary" type="button" title="Добавить в избранное" aria-pressed="false">В избранное</button>
+                <div class="catalog__stars catalog__stars--3" role="img">
+                  <span class="visually-hidden">3 звезды</span>
+                </div>
+                <p class="catalog__rating button button--small">Рейтинг: <span>6,9</span></p>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article>
+                <h3 class="catalog__h3 h3">GreenTree Inn</h3>
+                <img class="catalog__image" src="images/catalog/hotel-4.jpeg" width="300" height="212" alt="Звезды на ночном небе, светящиеся над красными скалами Седоны, которые подсвечены мягким светом.">
+                <p class="catalog__type">Гостиница</p>
+                <p class="catalog__price">От <span>1500</span> ₽</p>
+                <a class="catalog__button button button--small button--primary" href="#" title="Ознакомиться подробнее">Подробнее</a>
+                <button class="catalog__button button button--small button--secondary" type="button" title="Добавить в избранное" aria-pressed="false">В избранное</button>
+                <div class="catalog__stars catalog__stars--2" role="img">
+                  <span class="visually-hidden">2 звезды</span>
+                </div>
+                <p class="catalog__rating button button--small">Рейтинг: <span>5,0</span></p>
               </article>
             </li>
           </ul>
 
           <!-- pagination -->
-          <ul class="pagination__list">
-            <li>
-              <a class="pagination__button button button--secondary button--big pugination__button--current" href="#" aria-current="true" role="button">1</a>
-            </li>
-            <li>
-              <a class="pagination__button button button--secondary button--big" href="#" role="button">2</a>
-            </li>
-            <li>
-              <a class="pagination__button button button--secondary button--big" href="#" role="button">3</a>
-            </li>
-            <li>
-              <a class="pagination__button button button--secondary button--big" href="#" role="button">4</a>
-            </li>
-            <li>
-              <span class="pagination__button button--big pagination__button--ellipsis" aria-hidden="true">…</span>
-            </li>
-            <li>
-              <a class="pagination__button button button--secondary button--big" href="#" role="button">10</a>
-            </li>
-          </ul>
+          <nav aria-label="Навигация по страницам">
+            <ul class="pagination__list">
+              <li>
+                <a class="pagination__button button button--secondary button--big pagination__button--current" href="#" aria-current="true" role="button" aria-pressed="true">1</a>
+              </li>
+              <li>
+                <a class="pagination__button button button--secondary button--big" href="#" role="button" aria-pressed="false">2</a>
+              </li>
+              <li>
+                <a class="pagination__button button button--secondary button--big" href="#" role="button" aria-pressed="false">3</a>
+              </li>
+              <li>
+                <a class="pagination__button button button--secondary button--big" href="#" role="button" aria-pressed="false">4</a>
+              </li>
+              <li>
+                <span class="pagination__button button button--big pagination__button--current" aria-hidden="true">...</span>
+              </li>
+              <li>
+                <a class="pagination__button button button--secondary button--big" href="#" role="button" aria-pressed="false">10</a>
+              </li>
+            </ul>
+          </nav>
         </section>
 
         <!-- subscribe -->
-        <section class="subscribe" aria-labelledby="subscribe-title">
-          <h2 class="h2" id="subscribe-title">Подпишитесь на рассылку</h2>
+        <section class="subscribe section" aria-labelledby="subscribe">
+          <h2 class="h2" id="subscribe">Подпишитесь на рассылку</h2>
           <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email">Введите вашу электронную почту</label>
@@ -245,7 +289,7 @@
       <footer class="footer">
         <ul class="footer__list social">
           <li>
-            <a class="social__icon social__icon--vk" href="#" title="Перейти в Вконтакте" target="_blank" rel="noreferrer noopener">
+            <a class="social__icon social__icon--vk" href="https://vk.com/htmlacademy" title="Перейти в Вконтакте" target="_blank" rel="noreferrer noopener">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
@@ -270,7 +314,8 @@
 
     </div>
 
-    <script src="scripts/hotel-count.js"></script>
+    <script src="scripts/hotel-count.js" defer></script>
+    <script src="scripts/favorite.js" defer></script>
   </body>
 
 </html>

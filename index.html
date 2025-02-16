@@ -17,7 +17,7 @@
       <!-- header -->
       <header class="header">
         <a class="header__logo-link" href="index.html" aria-label="Главная страница" title="Главная страница">
-          <img class="header__logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
+          <img src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
         </a>
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
@@ -43,8 +43,8 @@
                 <output class="navigation__favorite-count is--active">12</output>
               </a>
             </li>
-            <li class="navigation__item navigation__item--button">
-              <a class="button button--primary button--small" href="#">Хочу сюда!</a>
+            <li class="navigation__item">
+              <a class="header__button button button--primary button--small" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -54,18 +54,19 @@
       <main class="main">
 
         <!-- hero -->
-        <section class="hero" aria-labelledby="hero-title">
-          <h1 class="visually-hidden" id="hero-title">Официальный сайт города Седона</h1>
+        <section class="hero section" aria-labelledby="hero">
+          <h1 class="visually-hidden" id="hero">Официальный сайт города Седона</h1>
           <img class="hero__image" src="images/hero-image.svg" width="458" height="352" alt="Банер с надписью «Добро пожаловать в великолепную Седону, потому что здесь круче чем в Гранд-Каньоне!» на фоне живописных окрестностей Седоны.">
         </section>
+
         <!-- advantages -->
-        <section class="advantages" aria-labelledby="advantages-title">
-          <h2 class="visually-hidden" id="advantages-title">О городе Седана</h2>
+        <section class="advantages section" aria-labelledby="advantages">
+          <h2 class="visually-hidden" id="advantages">О городе Седана</h2>
           <p class="h2">Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</p>
-          <p class="description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-          <ul class="advantages__list">
+          <p class="advantages__description description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <ul class="advantages__list list">
             <li class="advantages__item item advantages__item--row">
-              <div class="advantages__item-wrapper">
+              <div class="advantages__item-wrapper item">
                 <h3 class="h3">Настоящий городок</h3>
                 <p class="item__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
@@ -85,19 +86,20 @@
             </li>
             <li class="advantages__item item advantages__item--row">
               <img class="advantages__image" src="images/advantages-image-landscape.jpeg" width="800" height="385" alt="Живописные фасады зданий центра города Седоны с цветущими цветами на переднем плане, зданием с вывеской «OPEN RANGE GRILL AND TAVERN» и величественными горами на заднем плане." loading="lazy">
-              <div class="advantages__item-wrapper">
+              <div class="advantages__item-wrapper item">
                 <h3 class="h3">Там есть мост дьявола</h3>
                 <p class="item__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
             </li>
           </ul>
         </section>
+
         <!-- service -->
-        <section class="service" aria-labelledby="service-title">
-          <h2 class="visually-hidden" id="service-title">Отдых в Седоне</h2>
+        <section class="service section" aria-labelledby="service">
+          <h2 class="visually-hidden" id="service">Отдых в Седоне</h2>
           <p class="h2">Приезжайте в Седону отдохнуть <br>в комфорте и уюте!</p>
           <p class="description">Опытный персонал и качественное обслуживание!</p>
-          <ul class="service__list">
+          <ul class="service__list list">
             <li class="service__item item">
               <h3 class="h3 item__icon item__icon--house">Жильё</h3>
               <p class="item__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -112,29 +114,32 @@
             </li>
           </ul>
         </section>
+
         <!-- search -->
-        <section class="search" aria-labelledby="search-title">
-          <h2 class="visually-hidden" id="search-title">Поиск гостиницы в Седоне</h2>
+        <section class="search section" aria-labelledby="search">
+          <h2 class="visually-hidden" id="search">Поиск гостиницы в Седоне</h2>
           <p class="h2">Заинтересовались?</p>
           <p class="description">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search__button button button--primary button--big" href="#">Поиск гостиницы в Седоне</a>
         </section>
+
         <!-- subscribe -->
-        <section class="subscribe" aria-labelledby="subscribe-title">
-          <h2 class="h2" id="subscribe-title">Подпишитесь на рассылку</h2>
+        <section class="subscribe section subscribe--bg" aria-labelledby="subscribe">
+          <h2 class="h2" id="subscribe">Подпишитесь на рассылку</h2>
           <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email">Введите вашу электронную почту</label>
-            <input class="subscribe__input input" type="email" id="email" name="email" placeholder="Введите ваш e-mail" autocomplete="email" required>
+            <input class="input" type="email" id="email" name="email" placeholder="Введите ваш e-mail" autocomplete="email" required>
             <button class="subscribe__button button button--secondary button--big" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
+
       <!-- footer -->
       <footer class="footer">
         <ul class="footer__list social">
           <li>
-            <a class="social__icon social__icon--vk" href="#" title="Перейти в Вконтакте" target="_blank" rel="noreferrer noopener">
+            <a class="social__icon social__icon--vk" href="https://vk.com/htmlacademy" title="Перейти в Вконтакте" target="_blank" rel="noreferrer noopener">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
@@ -158,7 +163,7 @@
       </footer>
 
     </div>
-
+    <div class="progress"></div>
   </body>
 
 </html>
