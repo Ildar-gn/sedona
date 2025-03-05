@@ -25,7 +25,7 @@
               <a class="navigation__link navigation__link--current" aria-current="page">Главная</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="about.html">О городе</a>
+              <a class="navigation__link" href="about.html">О Седоне</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="catalog.html">Гостиницы</a>
@@ -70,7 +70,7 @@
                 <h3 class="h3">Настоящий городок</h3>
                 <p class="item__description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="advantages__image" src="images/advantages-image-city.jpeg" width="800" height="385" alt="Живописные фасады зданий центра города Седоны с цветущими цветами на переднем плане, зданием с вывеской «OPEN RANGE GRILL AND TAVERN» и величественными горами на заднем плане." loading="lazy">
+              <img class="advantages__image" src="images/advantages-image-city.jpeg" width="800" height="385" alt="Живописные фасады зданий центра города Седоны с цветущими цветами на переднем плане, зданием с вывеской «OPEN RANGE GRILL AND TAVERN» и величественными горами на заднем плане." loading="lazy" decoding="async">
             </li>
             <li class="advantages__item item">
               <h3 class="h3">Небольшая площадь</h3>
@@ -85,7 +85,7 @@
               <p class="item__description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
             <li class="advantages__item item advantages__item--row">
-              <img class="advantages__image" src="images/advantages-image-landscape.jpeg" width="800" height="385" alt="Живописные фасады зданий центра города Седоны с цветущими цветами на переднем плане, зданием с вывеской «OPEN RANGE GRILL AND TAVERN» и величественными горами на заднем плане." loading="lazy">
+              <img class="advantages__image" src="images/advantages-image-landscape.jpeg" width="800" height="385" alt="Живописные фасады зданий центра города Седоны с цветущими цветами на переднем плане, зданием с вывеской «OPEN RANGE GRILL AND TAVERN» и величественными горами на заднем плане." loading="lazy" decoding="async">
               <div class="advantages__item-wrapper item">
                 <h3 class="h3">Там есть мост дьявола</h3>
                 <p class="item__description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -128,8 +128,8 @@
           <h2 class="h2" id="subscribe">Подпишитесь на рассылку</h2>
           <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="email">Введите вашу электронную почту</label>
-            <input class="input" type="email" id="email" name="email" placeholder="Введите ваш e-mail" autocomplete="email" required>
+            <input class="subscribe__input input" type="email" id="email" name="email" placeholder autocomplete="email" required>
+            <label class="subscribe__label" for="email">Введите вашу электронную почту</label>
             <button class="subscribe__button button button--secondary button--big" type="submit">Подписаться</button>
           </form>
         </section>
@@ -163,7 +163,6 @@
       </footer>
 
     </div>
-    <div class="progress"></div>
   </body>
 
 </html>

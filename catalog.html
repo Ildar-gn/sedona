@@ -25,7 +25,7 @@
               <a class="navigation__link" href="index.html">Главная</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="about.html">О городе</a>
+              <a class="navigation__link" href="about.html">О Седоне</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link navigation__link--current" aria-current="page">Гостиницы</a>
@@ -80,21 +80,21 @@
                 <legend class="filter__legend">Инфраструктура:</legend>
                 <ul class="filter__list">
                   <li>
-                    <label class="option" for="pool">
-                      <input class="option__input" type="checkbox" name="pool" value="yes" id="pool" checked>
-                      <span class="option__label">Бассейн</span>
+                    <label class="control" for="pool">
+                      <input class="control__input" type="checkbox" name="pool" value="yes" id="pool" checked>
+                      <span class="control__label">Бассейн</span>
                     </label>
                   </li>
                   <li>
-                    <label class="option" for="parking">
-                      <input class="option__input" type="checkbox" name="parking" value="yes" id="parking" checked>
-                      <span class="option__label">Парковка</span>
+                    <label class="control" for="parking">
+                      <input class="control__input" type="checkbox" name="parking" value="yes" id="parking" checked>
+                      <span class="control__label">Парковка</span>
                     </label>
                   </li>
                   <li>
-                    <label class="option" for="wifi">
-                      <input class="option__input" type="checkbox" name="wifi" value="yes" id="wifi">
-                      <span class="option__label">Wi-Fi</span>
+                    <label class="control" for="wifi">
+                      <input class="control__input" type="checkbox" name="wifi" value="yes" id="wifi">
+                      <span class="control__label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -103,21 +103,21 @@
                 <legend class="filter__legend">Тип жилья:</legend>
                 <ul class="filter__list">
                   <li>
-                    <label class="option" for="place-type-hotel">
-                      <input class="option__input" type="radio" name="place-type" value="hotel" id="place-type-hotel" checked>
-                      <span class="option__label">Гостиница</span>
+                    <label class="control" for="place-type-hotel">
+                      <input class="control__input" type="radio" name="place-type" value="hotel" id="place-type-hotel" checked>
+                      <span class="control__label">Гостиница</span>
                     </label>
                   </li>
                   <li>
-                    <label class="option" for="place-type-motel">
-                      <input class="option__input" type="radio" name="place-type" value="motel" id="place-type-motel">
-                      <span class="option__label">Мотель</span>
+                    <label class="control" for="place-type-motel">
+                      <input class="control__input" type="radio" name="place-type" value="motel" id="place-type-motel">
+                      <span class="control__label">Мотель</span>
                     </label>
                   </li>
                   <li>
-                    <label class="option" for="place-type-apartments">
-                      <input class="option__input" type="radio" name="place-type" value="apartments" id="place-type-apartments">
-                      <span class="option__label">Апартаменты</span>
+                    <label class="control" for="place-type-apartments">
+                      <input class="control__input" type="radio" name="place-type" value="apartments" id="place-type-apartments">
+                      <span class="control__label">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
@@ -134,12 +134,13 @@
                     <input class="filter__input input" type="number" name="max" value="9000" placeholder="9000" id="max-price" required>
                   </label>
                 </p>
+
                 <div class="range-scale">
-                  <div class="range-scale__bar">
-                    <button class="range-scale__button button button--handle" type="button" role="slider" aria-describedby="min-price" aria-controls="min-price" aria-valuenow="0" aria-valuemin="0" aria-valuemax="9000">
+                  <div class="range-scale__bar" style="left: calc(0% + 10px); width: calc(79% - 20px);">
+                    <button class="range-scale__button button" type="button" role="slider" aria-describedby="min-price" aria-controls="min-price" aria-valuenow="0" aria-valuemin="0" aria-valuemax="9000">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="range-scale__button button button--handle" type="button" role="slider" aria-describedby="max-price" aria-controls="max-price" aria-valuenow="9000" aria-valuemin="0" aria-valuemax="9000">
+                    <button class="range-scale__button button" type="button" role="slider" aria-describedby="max-price" aria-controls="max-price" aria-valuenow="9000" aria-valuemin="0" aria-valuemax="9000">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
                   </div>
@@ -160,7 +161,7 @@
 
             <!-- sort -->
             <div class="select-wrapper">
-              <select class="select__sort-list" name="sort" aria-label="Выпадающий список сортировки">
+              <select class="select__sort-list" name="sort" aria-label="Выпадающий список сортировки" autocomplete="on">
                 <option value="popular">Сначала популярные</option>
                 <option value="cheap" selected>Сначала дешёвые</option>
                 <option value="expensive">Сначала дорогие</option>
@@ -192,7 +193,7 @@
             <li class="catalog__item">
               <article>
                 <h3 class="catalog__h3 h3">Amara Resort & Spa</h3>
-                <img class="catalog__image" src="images/catalog/hotel-1.jpeg" width="300" height="212" alt="Гостиница Amara Resort & Spa Ночное небо, усыпанное звездами, видно сквозь естественный каменный арку в каньоне Седона.">
+                <img class="catalog__image" src="images/catalog/hotel-1.jpeg" width="300" height="212" alt="Гостиница Amara Resort & Spa Ночное небо, усыпанное звездами, видно сквозь естественный каменный арку в каньоне Седона." loading="lazy" decoding="async">
                 <p class="catalog__type">Гостиница</p>
                 <p class="catalog__price">От <span>4000</span> ₽</p>
                 <a class="catalog__button button button--small button--primary" href="#" title="Ознакомиться подробнее">Подробнее</a>
@@ -206,7 +207,7 @@
             <li class="catalog__item">
               <article>
                 <h3 class="catalog__h3 h3">Villas at Poco Diablo</h3>
-                <img class="catalog__image" src="images/catalog/hotel-2.jpeg" width="300" height="212" alt="Закат над красочными скалами Седоны с радугой, выходящей из темных облаков. Скалы освещены солнцем, подчеркивая их богатые, теплые оттенки.">
+                <img class="catalog__image" src="images/catalog/hotel-2.jpeg" width="300" height="212" alt="Закат над красочными скалами Седоны с радугой, выходящей из темных облаков. Скалы освещены солнцем, подчеркивая их богатые, теплые оттенки." loading="lazy" decoding="async">
                 <p class="catalog__type">Гостиница</p>
                 <p class="catalog__price">От <span>5000</span> ₽</p>
                 <a class="catalog__button button button--small button--primary" href="#" title="Ознакомиться подробнее">Подробнее</a>
@@ -220,7 +221,7 @@
             <li class="catalog__item">
               <article>
                 <h3 class="catalog__h3 h3">Desert Quail Inn</h3>
-                <img class="catalog__image" src="images/catalog/hotel-3.jpeg" width="300" height="212" alt="Закат над красными скалами Седоны, обрамленный зелеными деревьями и ярким голубым небом с облаками. Скалы освещены золотистым светом заходящего солнца, подчеркивая их сложные слои и текстуры.">
+                <img class="catalog__image" src="images/catalog/hotel-3.jpeg" width="300" height="212" alt="Закат над красными скалами Седоны, обрамленный зелеными деревьями и ярким голубым небом с облаками. Скалы освещены золотистым светом заходящего солнца, подчеркивая их сложные слои и текстуры." loading="lazy" decoding="async">
                 <p class="catalog__type">Гостиница</p>
                 <p class="catalog__price">От <span>2500</span> ₽</p>
                 <a class="catalog__button button button--small button--primary" href="#" title="Ознакомиться подробнее">Подробнее</a>
@@ -234,7 +235,7 @@
             <li class="catalog__item">
               <article>
                 <h3 class="catalog__h3 h3">GreenTree Inn</h3>
-                <img class="catalog__image" src="images/catalog/hotel-4.jpeg" width="300" height="212" alt="Звезды на ночном небе, светящиеся над красными скалами Седоны, которые подсвечены мягким светом.">
+                <img class="catalog__image" src="images/catalog/hotel-4.jpeg" width="300" height="212" alt="Звезды на ночном небе, светящиеся над красными скалами Седоны, которые подсвечены мягким светом." loading="lazy" decoding="async">
                 <p class="catalog__type">Гостиница</p>
                 <p class="catalog__price">От <span>1500</span> ₽</p>
                 <a class="catalog__button button button--small button--primary" href="#" title="Ознакомиться подробнее">Подробнее</a>
@@ -277,8 +278,8 @@
           <h2 class="h2" id="subscribe">Подпишитесь на рассылку</h2>
           <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="email">Введите вашу электронную почту</label>
-            <input class="subscribe__input input" type="email" id="email" name="email" placeholder="Введите ваш e-mail" autocomplete="email" required>
+            <input class="subscribe__input input" type="email" id="email" name="email" placeholder autocomplete="email" required>
+            <label class="subscribe__label" for="email">Введите вашу электронную почту</label>
             <button class="subscribe__button button button--secondary button--big" type="submit">Подписаться</button>
           </form>
         </section>
@@ -316,6 +317,7 @@
 
     <script src="scripts/hotel-count.js" defer></script>
     <script src="scripts/favorite.js" defer></script>
+    <script src="scripts/range.js" defer></script>
   </body>
 
 </html>
